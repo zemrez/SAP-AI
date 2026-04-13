@@ -1,0 +1,16 @@
+@AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #ALLOWED
+define table zanm_ml_model {
+  key client       : abap.clnt not null;
+  key model_id     : sysuuid_x16 not null;
+      model_type   : abap.char(50);
+      version      : abap.int4;
+      params_json  : abap.string(0);
+      metrics_json : abap.string(0);
+      model_path   : abap.char(500);
+      is_active    : abap_boolean;
+      trained_at   : timestamp;
+      created_at   : timestamp;
+}

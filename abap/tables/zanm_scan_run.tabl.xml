@@ -1,0 +1,20 @@
+@AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #ALLOWED
+define table zanm_scan_run {
+  key client    : abap.clnt not null;
+  key scan_id   : sysuuid_x16 not null;
+      bukrs     : bukrs;
+      scan_type : abap.char(12);       "FULL / INCREMENTAL
+      status    : abap.char(10);       "PENDING / RUNNING / DONE / FAILED
+      date_from : budat;
+      date_to   : budat;
+      records_scand : abap.int4;
+      anomaly_count : abap.int4;
+      error_msg     : abap.string(0);
+      started_at    : timestamp;
+      finished_at   : timestamp;
+      created_by    : syuname;
+      created_at    : timestamp;
+}

@@ -1,0 +1,13 @@
+@AbapCatalog.enhancementCategory : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #C
+@AbapCatalog.dataMaintenance : #ALLOWED
+define table zanm_det_rule {
+  key client      : abap.clnt not null;
+  key rule_id     : sysuuid_x16 not null;
+      detector    : abap.char(30);
+      is_active   : abap_boolean;
+      config_json : abap.string(0);
+      created_at  : timestamp;
+      updated_at  : timestamp;
+}
