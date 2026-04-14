@@ -19,7 +19,12 @@ _service: AnomalyDetectiveService | None = None
 def _get_service() -> AnomalyDetectiveService:
     global _service
     if _service is None:
-        _service = AnomalyDetectiveService()
+        import os
+        if os.getenv("DEMO_MODE", "").lower() in ("true", "1", "yes"):
+            from .demo_service import DemoService
+            _service = DemoService()  # type: ignore[assignment]
+        else:
+            _service = AnomalyDetectiveService()
     return _service
 
 
