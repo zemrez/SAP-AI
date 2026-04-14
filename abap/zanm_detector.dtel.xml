@@ -11,6 +11,10 @@
     <SCRTEXT_S>Detector</SCRTEXT_S>
     <SCRTEXT_M>Detector Type</SCRTEXT_M>
     <SCRTEXT_L>Anomaly Detector Type</SCRTEXT_L>
+    <SCRLEN_S>10</SCRLEN_S>
+    <SCRLEN_M>20</SCRLEN_M>
+    <SCRLEN_L>40</SCRLEN_L>
+    <HEADLEN>10</HEADLEN>
     <DTELMASTER>E</DTELMASTER>
    </DD04V>
   </asx:values>
