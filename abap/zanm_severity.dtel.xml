@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZANM_SEVERITY</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZANM_D_SEVERITY</DOMNAME>
+    <DDTEXT>Anomaly Severity Level</DDTEXT>
+    <REPTEXT>Severity</REPTEXT>
+    <SCRTEXT_S>Severity</SCRTEXT_S>
+    <SCRTEXT_M>Severity</SCRTEXT_M>
+    <SCRTEXT_L>Anomaly Severity Level</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

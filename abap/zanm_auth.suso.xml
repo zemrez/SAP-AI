@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SUSO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOBJ>
+    <OBJCT>ZANM_AUTH</OBJCT>
+    <BNAME>Anomaly Detective Authorization</BNAME>
+    <OCLSS>ZANM</OCLSS>
+   </TOBJ>
+   <TACTZ>
+    <TACTZ>
+     <BRESSION>ZANM_AUTH</BRESSION>
+     <FIELD>ACTVT</FIELD>
+    </TACTZ>
+    <TACTZ>
+     <BRESSION>ZANM_AUTH</BRESSION>
+     <FIELD>BUKRS</FIELD>
+    </TACTZ>
+   </TACTZ>
+   <TOBJT>
+    <TTEXT>Anomaly Detective Authorization</TTEXT>
+   </TOBJT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

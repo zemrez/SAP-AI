@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZANM_D_ANOM_STATUS</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000015</LENG>
+    <OUTPUTLEN>000015</OUTPUTLEN>
+    <DDTEXT>Anomaly Status</DDTEXT>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZANM_D_ANOM_STATUS</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>OPEN</DOMVALUE_L>
+     <DDTEXT>Newly detected</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZANM_D_ANOM_STATUS</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>INVESTIGATING</DOMVALUE_L>
+     <DDTEXT>Under investigation</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZANM_D_ANOM_STATUS</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>RESOLVED</DOMVALUE_L>
+     <DDTEXT>Resolved</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZANM_D_ANOM_STATUS</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>FALSE_POS</DOMVALUE_L>
+     <DDTEXT>False positive</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

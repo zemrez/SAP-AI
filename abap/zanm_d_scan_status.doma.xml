@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZANM_D_SCAN_STATUS</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000010</LENG>
+    <OUTPUTLEN>000010</OUTPUTLEN>
+    <DDTEXT>Scan Status</DDTEXT>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZANM_D_SCAN_STATUS</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PENDING</DOMVALUE_L>
+     <DDTEXT>Scan is queued</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZANM_D_SCAN_STATUS</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>RUNNING</DOMVALUE_L>
+     <DDTEXT>Scan in progress</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZANM_D_SCAN_STATUS</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>DONE</DOMVALUE_L>
+     <DDTEXT>Scan completed</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZANM_D_SCAN_STATUS</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>FAILED</DOMVALUE_L>
+     <DDTEXT>Scan failed</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

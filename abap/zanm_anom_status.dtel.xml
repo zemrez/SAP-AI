@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZANM_ANOM_STATUS</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZANM_D_ANOM_STATUS</DOMNAME>
+    <DDTEXT>Anomaly Investigation Status</DDTEXT>
+    <REPTEXT>Anom Status</REPTEXT>
+    <SCRTEXT_S>Anom.Stat</SCRTEXT_S>
+    <SCRTEXT_M>Anomaly Status</SCRTEXT_M>
+    <SCRTEXT_L>Anomaly Investigation Status</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>
