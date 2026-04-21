@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRVD" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRVD>
+    <SRVD_NAME>ZANM_ODATA_V4_SRVD</SRVD_NAME>
+    <LANGU>E</LANGU>
+    <SHORT_TEXT>Anomaly Detective OData V4 Service Definition</SHORT_TEXT>
+   </SRVD>
+  </asx:values>
+ </asx:abap>
+</abapGit>

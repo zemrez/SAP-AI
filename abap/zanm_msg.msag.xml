@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZANM_MSG</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Anomaly Detective Messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZANM_MSG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Scan execution failed: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZANM_MSG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>No data found for the given selection: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZANM_MSG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>SAP data read error: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZANM_MSG</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>OData processing error: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZANM_MSG</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Configuration key not found: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZANM_MSG</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Detection rule not found: &amp;1</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

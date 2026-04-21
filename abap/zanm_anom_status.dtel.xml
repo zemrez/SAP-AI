@@ -5,16 +5,16 @@
    <DD04V>
     <ROLLNAME>ZANM_ANOM_STATUS</ROLLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
+    <HEADLEN>11</HEADLEN>
+    <SCRLEN_S>10</SCRLEN_S>
+    <SCRLEN_M>20</SCRLEN_M>
+    <SCRLEN_L>40</SCRLEN_L>
     <DOMNAME>ZANM_D_ANOM_STATUS</DOMNAME>
     <DDTEXT>Anomaly Investigation Status</DDTEXT>
     <REPTEXT>Anom Status</REPTEXT>
     <SCRTEXT_S>Anom.Stat</SCRTEXT_S>
     <SCRTEXT_M>Anomaly Status</SCRTEXT_M>
     <SCRTEXT_L>Anomaly Investigation Status</SCRTEXT_L>
-    <SCRLEN_S>10</SCRLEN_S>
-    <SCRLEN_M>20</SCRLEN_M>
-    <SCRLEN_L>40</SCRLEN_L>
-    <HEADLEN>11</HEADLEN>
     <DTELMASTER>E</DTELMASTER>
    </DD04V>
   </asx:values>
