@@ -1,10 +1,7 @@
-@AbapCatalog.sqlViewName: 'ZIANMJOURNAL'
-@AbapCatalog.compiler.compareFilter: true
-@AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Interface View - Journal Entry (BKPF/BSEG)'
 
-define view ZI_ANM_JOURNAL_ENTRY
+define view entity ZI_ANM_JOURNAL_ENTRY
   as select from bkpf
   inner join bseg on  bseg.bukrs = bkpf.bukrs
                    and bseg.belnr = bkpf.belnr

@@ -1,10 +1,7 @@
-@AbapCatalog.sqlViewName: 'ZIANMSCANRUN'
-@AbapCatalog.compiler.compareFilter: true
-@AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Interface View - Scan Run'
 
-define view ZI_ANM_SCAN_RUN
+define view entity ZI_ANM_SCAN_RUN
   as select from zanm_scan_run
 {
   key scan_id       as ScanId,

@@ -1,6 +1,3 @@
-@AbapCatalog.sqlViewName: 'ZCANMSCANRUN'
-@AbapCatalog.compiler.compareFilter: true
-@AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Consumption View - Scan Run'
 
@@ -15,7 +12,7 @@
 
 @Search.searchable: true
 
-define view ZC_ANM_SCAN_RUN
+define view entity ZC_ANM_SCAN_RUN
   as projection on ZI_ANM_SCAN_RUN
 {
       @UI.facet: [

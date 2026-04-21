@@ -1,6 +1,3 @@
-@AbapCatalog.sqlViewName: 'ZCANMANOMALY'
-@AbapCatalog.compiler.compareFilter: true
-@AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Consumption View - Anomaly'
 
@@ -15,7 +12,7 @@
 
 @Search.searchable: true
 
-define view ZC_ANM_ANOMALY
+define view entity ZC_ANM_ANOMALY
   as projection on ZI_ANM_ANOMALY
 {
       @UI.facet: [
