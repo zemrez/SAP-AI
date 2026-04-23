@@ -7,6 +7,9 @@ CLASS zcl_anm_odata_handler DEFINITION
 
   PUBLIC SECTION.
 
+    TYPES: ty_scan_run_tab  TYPE STANDARD TABLE OF zanm_scan_run WITH DEFAULT KEY.
+    TYPES: ty_anomaly_tab   TYPE STANDARD TABLE OF zanm_anomaly WITH DEFAULT KEY.
+
     "! Anomaly list filter structure
     TYPES:
       BEGIN OF ty_anomaly_filter,
@@ -32,8 +35,7 @@ CLASS zcl_anm_odata_handler DEFINITION
     "! @parameter iv_date_to   | End date
     "! @parameter iv_scan_type | FULL or INCREMENTAL
     "! @parameter rv_scan_id   | Created scan UUID
-    "! @raising zcx_anm_exception | On creation errors
-    "! @raising cx_no_authority   | When user lacks authorization
+    "! @raising zcx_anm_exception | On creation errors or authorization failure
     CLASS-METHODS create_scan
       IMPORTING
         iv_bukrs          TYPE bukrs
@@ -43,8 +45,7 @@ CLASS zcl_anm_odata_handler DEFINITION
       RETURNING
         VALUE(rv_scan_id) TYPE sysuuid_x16
       RAISING
-        zcx_anm_exception
-        cx_no_authority.
+        zcx_anm_exception.
 
     "! Read a single scan run by ID
     "! @parameter iv_scan_id | Scan UUID
@@ -67,7 +68,7 @@ CLASS zcl_anm_odata_handler DEFINITION
         iv_bukrs         TYPE bukrs OPTIONAL
         is_paging        TYPE ty_paging OPTIONAL
       RETURNING
-        VALUE(rt_scans)  TYPE STANDARD TABLE OF zanm_scan_run WITH DEFAULT KEY.
+        VALUE(rt_scans)  TYPE ty_scan_run_tab.
 
     " --- Anomaly operations ---
 
@@ -99,7 +100,7 @@ CLASS zcl_anm_odata_handler DEFINITION
         iv_order_by         TYPE string DEFAULT 'RISK_SCORE'
         iv_order_dir        TYPE string DEFAULT 'DESC'
       RETURNING
-        VALUE(rt_anomalies) TYPE STANDARD TABLE OF zanm_anomaly WITH DEFAULT KEY.
+        VALUE(rt_anomalies) TYPE ty_anomaly_tab.
 
     "! Read a single anomaly by ID
     "! @parameter iv_anomaly_id | Anomaly UUID
@@ -120,7 +121,7 @@ CLASS zcl_anm_odata_handler DEFINITION
       IMPORTING
         iv_scan_id          TYPE sysuuid_x16
       RETURNING
-        VALUE(rt_anomalies) TYPE STANDARD TABLE OF zanm_anomaly WITH DEFAULT KEY.
+        VALUE(rt_anomalies) TYPE ty_anomaly_tab.
 
     "! Delete an anomaly (admin operation)
     "! @parameter iv_anomaly_id | Anomaly UUID

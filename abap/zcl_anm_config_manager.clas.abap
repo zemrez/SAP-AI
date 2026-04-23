@@ -7,6 +7,8 @@ CLASS zcl_anm_config_manager DEFINITION
 
   PUBLIC SECTION.
 
+    TYPES: ty_config_tab TYPE STANDARD TABLE OF zanm_config WITH DEFAULT KEY.
+
     "! Default configuration keys
     CONSTANTS:
       gc_key_sidecar_url     TYPE char50 VALUE 'SAP_SIDECAR_URL',
@@ -44,7 +46,7 @@ CLASS zcl_anm_config_manager DEFINITION
     "! @parameter rt_configs | Table of all config records
     CLASS-METHODS get_all_configs
       RETURNING
-        VALUE(rt_configs) TYPE STANDARD TABLE OF zanm_config WITH DEFAULT KEY.
+        VALUE(rt_configs) TYPE ty_config_tab.
 
     "! Delete a configuration entry
     "! @parameter iv_key | Configuration key to delete

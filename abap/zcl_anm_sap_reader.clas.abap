@@ -79,8 +79,7 @@ CLASS zcl_anm_sap_reader DEFINITION
     "! @parameter iv_date_from | Start date
     "! @parameter iv_date_to   | End date
     "! @parameter rt_entries   | Journal entry records
-    "! @raising zcx_anm_exception | SAP_READ_ERROR on DB errors
-    "! @raising cx_no_authority   | When user lacks BUKRS authorization
+    "! @raising zcx_anm_exception | SAP_READ_ERROR on DB errors or authorization failure
     CLASS-METHODS get_journal_entries
       IMPORTING
         iv_bukrs          TYPE bukrs
@@ -89,16 +88,14 @@ CLASS zcl_anm_sap_reader DEFINITION
       RETURNING
         VALUE(rt_entries) TYPE tt_journal_entries
       RAISING
-        zcx_anm_exception
-        cx_no_authority.
+        zcx_anm_exception.
 
     "! Read vendor invoices (BSIK open + BSAK cleared) for a company code and date range
     "! @parameter iv_bukrs     | Company code
     "! @parameter iv_date_from | Start date
     "! @parameter iv_date_to   | End date
     "! @parameter rt_invoices  | Vendor invoice records
-    "! @raising zcx_anm_exception | SAP_READ_ERROR on DB errors
-    "! @raising cx_no_authority   | When user lacks BUKRS authorization
+    "! @raising zcx_anm_exception | SAP_READ_ERROR on DB errors or authorization failure
     CLASS-METHODS get_vendor_invoices
       IMPORTING
         iv_bukrs           TYPE bukrs
@@ -107,15 +104,13 @@ CLASS zcl_anm_sap_reader DEFINITION
       RETURNING
         VALUE(rt_invoices) TYPE tt_vendor_invoices
       RAISING
-        zcx_anm_exception
-        cx_no_authority.
+        zcx_anm_exception.
 
     "! Read GL account balances from FAGLFLEXT for a company code and fiscal year
     "! @parameter iv_bukrs    | Company code
     "! @parameter iv_gjahr    | Fiscal year
     "! @parameter rt_balances | GL balance records
-    "! @raising zcx_anm_exception | SAP_READ_ERROR on DB errors
-    "! @raising cx_no_authority   | When user lacks BUKRS authorization
+    "! @raising zcx_anm_exception | SAP_READ_ERROR on DB errors or authorization failure
     CLASS-METHODS get_gl_balances
       IMPORTING
         iv_bukrs           TYPE bukrs
@@ -123,8 +118,7 @@ CLASS zcl_anm_sap_reader DEFINITION
       RETURNING
         VALUE(rt_balances) TYPE tt_gl_balances
       RAISING
-        zcx_anm_exception
-        cx_no_authority.
+        zcx_anm_exception.
 
   PROTECTED SECTION.
   PRIVATE SECTION.

@@ -7,11 +7,13 @@ CLASS zcl_anm_rule_manager DEFINITION
 
   PUBLIC SECTION.
 
+    TYPES: ty_det_rule_tab TYPE STANDARD TABLE OF zanm_det_rule WITH DEFAULT KEY.
+
     "! Return all detection rules
     "! @parameter rt_rules | Table of all rule records
     CLASS-METHODS get_rules
       RETURNING
-        VALUE(rt_rules) TYPE STANDARD TABLE OF zanm_det_rule WITH DEFAULT KEY.
+        VALUE(rt_rules) TYPE ty_det_rule_tab.
 
     "! Return a single rule by ID
     "! @parameter iv_rule_id | Rule UUID

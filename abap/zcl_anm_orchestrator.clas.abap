@@ -32,8 +32,7 @@ CLASS zcl_anm_orchestrator DEFINITION
     "! @parameter iv_date_to   | End date for scan
     "! @parameter iv_scan_type | FULL or INCREMENTAL
     "! @parameter rv_scan_id   | Generated scan UUID
-    "! @raising zcx_anm_exception | SCAN_FAILED on errors
-    "! @raising cx_no_authority   | When user lacks authorization
+    "! @raising zcx_anm_exception | SCAN_FAILED on errors or authorization failure
     CLASS-METHODS trigger_scan
       IMPORTING
         iv_bukrs          TYPE bukrs
@@ -43,8 +42,7 @@ CLASS zcl_anm_orchestrator DEFINITION
       RETURNING
         VALUE(rv_scan_id) TYPE sysuuid_x16
       RAISING
-        zcx_anm_exception
-        cx_no_authority.
+        zcx_anm_exception.
 
     "! Get current status of a scan run
     "! @parameter iv_scan_id | Scan UUID

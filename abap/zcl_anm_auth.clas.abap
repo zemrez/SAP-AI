@@ -17,13 +17,13 @@ CLASS zcl_anm_auth DEFINITION
     "! Check if user is authorized for an activity on a company code
     "! @parameter iv_actvt  | Activity (01/02/03/16)
     "! @parameter iv_bukrs  | Company code
-    "! @raising cx_no_authority | Raised when user lacks authorization
+    "! @raising zcx_anm_exception | Raised when user lacks authorization
     CLASS-METHODS check_authority
       IMPORTING
         iv_actvt TYPE activ_auth
         iv_bukrs TYPE bukrs
       RAISING
-        cx_no_authority.
+        zcx_anm_exception.
 
     "! Check authorization and return boolean (no exception)
     "! @parameter iv_actvt  | Activity (01/02/03/16)
@@ -49,10 +49,10 @@ CLASS zcl_anm_auth IMPLEMENTATION.
       ID 'BUKRS' FIELD iv_bukrs.
 
     IF sy-subrc <> 0.
-      RAISE EXCEPTION TYPE cx_no_authority
+      RAISE EXCEPTION TYPE zcx_anm_exception
         EXPORTING
-          textid   = cx_no_authority=>cx_no_authority
-          previous = VALUE #( ).
+          textid  = zcx_anm_exception=>gc_scan_failed
+          details = |Authorization check failed for activity { iv_actvt } company code { iv_bukrs }|.
     ENDIF.
   ENDMETHOD.
 
