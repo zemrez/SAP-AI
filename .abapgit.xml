@@ -12,6 +12,7 @@
     <item>/backend/</item>
     <item>/frontend/</item>
     <item>/.claude/</item>
+    <item>/abap/zanm_auth.suso.xml</item>
    </IGNORE>
   </DATA>
  </asx:values>
