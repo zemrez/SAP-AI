@@ -1,5 +1,0 @@
-@EndUserText.label: 'Anomaly Detective OData V4 Service Definition'
-define service ZANM_ODATA_V4_SRVD {
-  expose ZC_ANM_ANOMALY  as Anomalies;
-  expose ZC_ANM_SCAN_RUN as ScanRuns;
-}

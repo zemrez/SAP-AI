@@ -1,6 +1,0 @@
-@EndUserText.label: 'Anomaly Detective OData V4 Service Binding (UI)'
-define service binding ZANM_ODATA_V4_UI {
-  service   : ZANM_ODATA_V4_SRVD;
-  binding   : odata_v4_ui;
-  protocol  : /iwbep/if_v4_protocol=>gcs_protocol-odata_v4;
-}

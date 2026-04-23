@@ -1,8 +1,6 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Consumption View - Anomaly'
 
-@Metadata.allowExtensions: true
-
 @UI.headerInfo: {
   typeName: 'Anomaly',
   typeNamePlural: 'Anomalies',
@@ -13,7 +11,7 @@
 @Search.searchable: true
 
 define view entity ZC_ANM_ANOMALY
-  as projection on ZI_ANM_ANOMALY
+  as select from ZI_ANM_ANOMALY
 {
       @UI.facet: [
         { id: 'General',    purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'General',    position: 10 },

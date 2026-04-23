@@ -1,8 +1,6 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Consumption View - Scan Run'
 
-@Metadata.allowExtensions: true
-
 @UI.headerInfo: {
   typeName: 'Scan Run',
   typeNamePlural: 'Scan Runs',
@@ -13,7 +11,7 @@
 @Search.searchable: true
 
 define view entity ZC_ANM_SCAN_RUN
-  as projection on ZI_ANM_SCAN_RUN
+  as select from ZI_ANM_SCAN_RUN
 {
       @UI.facet: [
         { id: 'General', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'General', position: 10 },
