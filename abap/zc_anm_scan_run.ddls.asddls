@@ -63,13 +63,7 @@ define view entity ZC_ANM_SCAN_RUN
 
       CreatedAt,
 
-      /* Virtual element for status criticality */
+      /* Virtual element for status criticality (defined in interface view) */
       @UI.hidden: true
-      case Status
-        when 'DONE'    then 3
-        when 'RUNNING' then 2
-        when 'PENDING' then 0
-        when 'FAILED'  then 1
-        else 0
-      end as StatusCriticality
+      StatusCriticality
 }

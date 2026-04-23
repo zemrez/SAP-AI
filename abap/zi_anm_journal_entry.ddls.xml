@@ -5,7 +5,7 @@
    <DDLS>
     <DDLNAME>ZI_ANM_JOURNAL_ENTRY</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>Interface View - Journal Entry (BKPF/BSEG)</DDTEXT>
+    <DDTEXT>Interface View - Journal Entry</DDTEXT>
    </DDLS>
   </asx:values>
  </asx:abap>

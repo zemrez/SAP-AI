@@ -83,24 +83,12 @@ define view entity ZC_ANM_ANOMALY
       @UI.lineItem: [{ position: 80 }]
       CreatedAt,
 
-      /* Virtual elements for UI criticality */
+      /* Virtual elements for UI criticality (defined in interface view) */
       @UI.hidden: true
-      case Severity
-        when 'CRITICAL' then 1
-        when 'HIGH'     then 1
-        when 'MEDIUM'   then 2
-        when 'LOW'      then 3
-        else 0
-      end as SeverityCriticality,
+      SeverityCriticality,
 
       @UI.hidden: true
-      case Status
-        when 'OPEN'          then 1
-        when 'INVESTIGATING' then 2
-        when 'RESOLVED'      then 3
-        when 'FALSE_POS'     then 0
-        else 0
-      end as StatusCriticality,
+      StatusCriticality,
 
       /* Associations */
       _ScanRun

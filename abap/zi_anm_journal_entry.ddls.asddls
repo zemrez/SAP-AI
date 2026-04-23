@@ -1,5 +1,5 @@
 @AccessControl.authorizationCheck: #CHECK
-@EndUserText.label: 'Interface View - Journal Entry (BKPF/BSEG)'
+@EndUserText.label: 'Interface View - Journal Entry'
 
 define view entity ZI_ANM_JOURNAL_ENTRY
   as select from bkpf
@@ -32,7 +32,9 @@ define view entity ZI_ANM_JOURNAL_ENTRY
       bseg.koart    as AccountType,
       bseg.hkont    as GLAccount,
       bseg.shkzg    as DebitCreditIndicator,
+      @Semantics.amount.currencyCode: 'CurrencyKey'
       bseg.dmbtr    as AmountInLocalCurrency,
+      @Semantics.amount.currencyCode: 'CurrencyKey'
       bseg.wrbtr    as AmountInDocCurrency,
       bseg.mwskz    as TaxCode,
       bseg.kostl    as CostCenter,
